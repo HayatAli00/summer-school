@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Introduction
+      </h1>
+
+      <h2>Your details</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Organisation name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            M academies
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Sarah Phillips
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            UKNOO
+          </dt>
+          <dd class="govuk-summary-list__value">
+            67217821
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body">07700 900457</p>
+            <p class="govuk-body">sarah.phillips@example.com</p>
+          </dd>
+        </div>
+      </dl>
+      <p>Use this form to claim funding for your summer school, by confirming that your summer school took place in accordance with the guidance https://www.gov.uk/government/publications/summer-schools-programme and conditions of funding, and providing information about the pupils who took part, the activities offered and how your summer school was staffed.</p>
+
+      <h3>you can also claim funding for:</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>any summer school places you delivered on behalf of other schools that did not run their own summer school</li>
+        <li>any unrecoverable costs you incurred, for example, where a pupil has been invited, but not attended at very short notice</li>
+       
+      </ul>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="#">Cancel</a>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
