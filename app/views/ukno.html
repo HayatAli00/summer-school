@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Provide your UKNOO or UNO
+      </h1>
+
+      <form class="form" action="/ukno" method="post">
+
+        <p>
+          <div class="govuk-form-group">
+            <!-- <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--l" for="account-number">
+                What is your account number?
+              </label>
+            </h1> -->
+            <div id="account-number-hint" class="govuk-hint">
+              This is your unique number and must be between 6 to 8 digits
+            </div>
+            <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+          </div>
+
+        </p>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

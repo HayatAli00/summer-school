@@ -17,16 +17,47 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Heading or question goes here
+        Data validation 
       </h1>
 
       <form class="form" action="/path/of/next/page" method="post">
 
         <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
+        
+You can also claim funding for:
+any summer school places you delivered on behalf of other schools that did not run their own summer school
+any unrecoverable costs you incurred, for example, where a pupil has been invited, but not attended at very short notice.
+
+However, if you need flexibility for other reasons you can tell us about it here.
+or example, you have commitments like caring responsibilities or employment.
+Contact your provider if you’re concerned about the interview process.
+        
         </p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-fieldset__heading">
+                Do you have any interview needs?
+              </h2>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  No
+                </label>
+              </div>
+              
+            </div>
+          </fieldset>
+        </div>
 
         {{ govukButton({
           text: "Continue"
