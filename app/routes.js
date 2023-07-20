@@ -75,7 +75,7 @@ router.post('/question1', function (req, res) {
 
 
 
-       //navigation from question3 to question4
+       //navigation from summery to question3
  
 router.post('/summary-page', function (req, res) {
 
@@ -88,7 +88,21 @@ router.post('/summary-page', function (req, res) {
   })
 
 
-         //navigation from question4 to date-entery
+         //navigation from question3 to question4
+ 
+router.post('/question3', function (req, res) {
+
+    {
+  
+      res.redirect('/question4')
+  
+    }
+  
+  })
+
+
+
+ //navigation from question4 to dateentery
  
 router.post('/question4', function (req, res) {
 
@@ -101,8 +115,7 @@ router.post('/question4', function (req, res) {
   })
 
 
-
- //navigation from date-entery to validation
+  //navigation from date to validation
  
 router.post('/date', function (req, res) {
 
@@ -115,23 +128,10 @@ router.post('/date', function (req, res) {
   })
 
 
-  //navigation from validation to check-answer
+
+    //navigation from valitation to confomferm
  
 router.post('/validation', function (req, res) {
-
-    {
-  
-      res.redirect('/summary-page')
-  
-    }
-  
-  })
-
-
-
-    //navigation from  check-answer to confomferm
- 
-router.post('/summary-page', function (req, res) {
 
     {
   
