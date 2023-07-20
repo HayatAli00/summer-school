@@ -16,81 +16,55 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">
-        Check your answers before sending your application
+        Confirm your arrangements
       </h1>
 
-      {{ govukSummaryList({
-        rows: [
-          {
-            key: {
-              text: "Question 1"
-            },
-            value: {
-              text: "Answer 1"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 1"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Question 2"
-            },
-            value: {
-              text: "Answer 2"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 2"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Question 3"
-            },
-            value: {
-              text: "Answer 3"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
-
-      <h2 class="govuk-heading-m">
-        Now send your application
-      </h2>
+      <form class="form" action="/summary-page" method="post"></form>
 
       <p>
         By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
       </p>
 
+      <table class="govuk-table">
+    
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">
+              Organisation name</th>
+            <th scope="col" class="govuk-table__header">AP academics</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Uknoo / Uno</th>
+            <td class="govuk-table__cell">£109</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Full name</th>
+            <td class="govuk-table__cell">Sara Lance</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Education email</th>
+            <td class="govuk-table__cell">example@education.gov.uk</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">School participation</th>
+            <td class="govuk-table__cell">yes</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">School delivery </th>
+            <td class="govuk-table__cell">yes</td>
+          </tr>
+      
+        </tbody>
+      </table>
+
+  
       <form action="/confirmation" method="post" novalidate>
 
         {{ govukButton({
-          text: "Accept and send"
+          text: "Continue"
         }) }}
-
       </form>
 
     </div>

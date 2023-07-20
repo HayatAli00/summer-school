@@ -35,3 +35,108 @@ router.post('/ukno', function (req, res) {
     }
   
   })
+
+  //navigation from infroductionpage to question1
+ 
+router.post('/introduction-page', function (req, res) {
+
+    {
+  
+      res.redirect('/question1')
+  
+    }
+  
+  })
+
+   //navigation from question1 to question2
+ 
+router.post('/question1', function (req, res) {
+
+    {
+  
+      res.redirect('/question2')
+  
+    }
+  
+  })
+
+
+  //navigation from question2 to summery
+ 
+  router.post('/question2', function (req, res) {
+
+    {
+  
+      res.redirect('/summary-page')
+  
+    }
+  
+  })
+
+
+
+       //navigation from question3 to question4
+ 
+router.post('/summary-page', function (req, res) {
+
+    {
+  
+      res.redirect('/question3')
+  
+    }
+  
+  })
+
+
+         //navigation from question4 to date-entery
+ 
+router.post('/question4', function (req, res) {
+
+    {
+  
+      res.redirect('/date')
+  
+    }
+  
+  })
+
+
+
+ //navigation from date-entery to validation
+ 
+router.post('/date', function (req, res) {
+
+    {
+  
+      res.redirect('/validation')
+  
+    }
+  
+  })
+
+
+  //navigation from validation to check-answer
+ 
+router.post('/validation', function (req, res) {
+
+    {
+  
+      res.redirect('/summary-page')
+  
+    }
+  
+  })
+
+
+
+    //navigation from  check-answer to confomferm
+ 
+router.post('/summary-page', function (req, res) {
+
+    {
+  
+      res.redirect('/Confirmation-page')
+  
+    }
+  
+  })
